@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIYU GU | 谷子玉 - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #030303;
+            color: #E5E5E5;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, .syne-font {
+            font-family: 'Syne', sans-serif;
+        }
+        .text-accent { color: #D1FF00; }
+        .bg-accent { background-color: #D1FF00; }
+        .border-accent { border-color: #D1FF00; }
+        
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1rem;
+        }
+        .grid-lines {
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 4rem 4rem;
+        }
+        
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+        }
+        .marquee-content {
+            display: flex;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="antialiased grid-lines selection:bg-[#D1FF00] selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 mix-blend-difference px-6 py-4 flex justify-between items-center text-sm uppercase tracking-widest border-b border-white/10">
+        <div class="syne-font font-bold text-xl tracking-tighter">ZY.GU</div>
+        <div class="hidden md:flex gap-8">
+            <a href="#about" class="hover:text-accent transition-colors">About</a>
+            <a href="#experience" class="hover:text-accent transition-colors">Experience</a>
+            <a href="#works" class="hover:text-accent transition-colors">Selected Works</a>
+        </div>
+        <div>ZH / EN</div>
+    </nav>
+
+    <!-- Hero Section & Introduction -->
+    <section id="about" class="min-h-screen pt-24 pb-12 px-6 flex flex-col justify-center">
+        <div class="editorial-grid items-center mt-12">
+            <!-- Typography block -->
+            <div class="col-span-12 lg:col-span-7 z-10 flex flex-col justify-center order-2 lg:order-1 mt-12 lg:mt-0">
+                <h1 class="syne-font text-[15vw] lg:text-[9vw] leading-[0.8] font-extrabold uppercase tracking-tighter mix-blend-difference text-white">
+                    ZIYU<br><span class="text-accent">GU</span>
+                    <span class="block text-2xl lg:text-4xl mt-4 font-light tracking-wide text-gray-400">谷子玉</span>
+                </h1>
+                <div class="mt-12 flex flex-col gap-4 text-sm md:text-base max-w-xl text-gray-400 uppercase tracking-widest">
+                    <p class="border-l-2 border-accent pl-4">Brand Designer & Commercial Project Coordinator <br> 品牌设计师 / 商业项目统筹</p>
+                    <p class="border-l-2 border-accent pl-4">Fashion Management & Strategic Planning <br> 时尚管理｜品牌整合营销</p>
+                </div>
+            </div>
+            
+            <!-- Personal Photo (Fully normal colors, no yellow background) -->
+            <div class="col-span-12 lg:col-span-5 relative order-1 lg:order-2">
+                <div class="aspect-[3/4] w-full overflow-hidden border border-white/10 relative group bg-[#0a0a0a]">
+                    <img src="./图片1.png" alt="Ziyu Gu Profile" 
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/600x800/030303/D1FF00?text=Please+Put+%E5%9B%BE%E7%89%871.png+Here';" 
+                         class="w-full h-full object-cover object-top transition-all duration-700 scale-105 group-hover:scale-100 relative z-0">
+                    <div class="absolute bottom-4 right-4 text-xs uppercase tracking-widest bg-black/50 px-2 py-1 backdrop-blur-sm border border-white/20 text-white z-10">
+                        Visual Identity / 01
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Banner -->
+    <div class="border-y border-white/10 py-4 bg-accent text-black uppercase syne-font font-bold text-2xl tracking-widest overflow-hidden">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span class="px-8">Avant-Garde</span>
+                <span class="px-8">•</span>
+                <span class="px-8">Experimentalism</span>
+                <span class="px-8">•</span>
+                <span class="px-8">Commercial Strategy</span>
+                <span class="px-8">•</span>
+                <span class="px-8">Fashion Management</span>
+                <span class="px-8">•</span>
+                <span class="px-8">Visual Identity</span>
+                <span class="px-8">•</span>
+                <span class="px-8">Avant-Garde</span>
+                <span class="px-8">•</span>
+                <span class="px-8">Experimentalism</span>
+                <span class="px-8">•</span>
+                <span class="px-8">Commercial Strategy</span>
+                <span class="px-8">•</span>
+                <span class="px-8">Fashion Management</span>
+                <span class="px-8">•</span>
+                <span class="px-8">Visual Identity</span>
+                <span class="px-8">•</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience & Education -->
+    <section id="experience" class="py-24 px-6 border-b border-white/10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="syne-font text-4xl lg:text-6xl font-bold uppercase mb-16">Curriculum<br><span class="text-accent">Vitae.</span></h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Professional Experience -->
+                <div>
+                    <h3 class="text-sm text-gray-500 uppercase tracking-widest mb-8 pb-2 border-b border-white/10">Professional Experience / 工作经历</h3>
+                    
+                    <div class="mb-12 group">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h4 class="text-xl font-bold">Xiaohongshu / 小红书</h4>
+                            <span class="text-accent text-sm">2023.7 - 2026.9</span>
+                        </div>
+                        <p class="text-gray-400 mb-2 uppercase text-xs tracking-wider">Fashion Media Strategist / 时尚自媒体运营</p>
+                        <p class="text-sm text-gray-500 leading-relaxed group-hover:text-gray-300 transition-colors">
+                            全球前沿时尚叙事与趋势洞察。与 Lanvin、The North Face、Arc'teryx 等 60+ 国际奢侈品与先锋设计师品牌推广合作。追踪 Gorpcore、Balletcore 等全球青年微趋势演进，为产品开发提供精准市场验证。
+                        </p>
+                    </div>
+
+                    <div class="mb-12 group">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h4 class="text-xl font-bold">Marisfrolg Group / 玛丝菲尔集团</h4>
+                            <span class="text-accent text-sm">2022.7 - 2023.9</span>
+                        </div>
+                        <p class="text-gray-400 mb-2 uppercase text-xs tracking-wider">Brand Designer & Project Manager / 品牌设计师 & 商业项目统筹</p>
+                        <p class="text-sm text-gray-500 leading-relaxed group-hover:text-gray-300 transition-colors">
+                            负责旗下 RuirUirul 与 PSYCHOLOGICAL 品牌服装设计。独立主导季度系列开发，深度跟进全链路落地。统筹 RuirUirul x KTM 国际赛车跨界联名项目全周期管理。牵头北服产学研协同创新链接。
+                        </p>
+                    </div>
+
+                    <div class="mb-12 group">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h4 class="text-xl font-bold">Gucci (China) / 古驰中国</h4>
+                            <span class="text-accent text-sm">2020.7 - 2020.9</span>
+                        </div>
+                        <p class="text-gray-400 mb-2 uppercase text-xs tracking-wider">Marketing Intern / 市场部实习</p>
+                        <p class="text-sm text-gray-500 leading-relaxed group-hover:text-gray-300 transition-colors">
+                            奢侈品零售趋势与竞品情报追踪。协助跟踪高端时尚零售前沿动态，建立系统化的品牌生命周期与产品商业化认知。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education & Skills -->
+                <div>
+                    <h3 class="text-sm text-gray-500 uppercase tracking-widest mb-8 pb-2 border-b border-white/10">Education / 教育经历</h3>
+                    
+                    <div class="mb-12 group">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h4 class="text-xl font-bold">Goldsmiths, University of London</h4>
+                            <span class="text-accent text-sm">2024.9 - 2026.2</span>
+                        </div>
+                        <p class="text-gray-400 mb-2 uppercase text-xs tracking-wider">MA Fashion Management / 伦敦大学金史密斯学院</p>
+                        <p class="text-sm text-gray-500 leading-relaxed group-hover:text-gray-300 transition-colors">
+                            核心研究方向：文化资本与商业转化、消费者行为学、全球青年亚文化与社群经济。熟练运用 SPSS 进行量化实证研究。
+                        </p>
+                    </div>
+
+                    <div class="mb-12 group">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h4 class="text-xl font-bold">Beijing Institute of Fashion Technology</h4>
+                            <span class="text-accent text-sm">2018.8 - 2022.7</span>
+                        </div>
+                        <p class="text-gray-400 mb-2 uppercase text-xs tracking-wider">BA Fashion Design / 北京服装学院</p>
+                        <p class="text-sm text-gray-500 leading-relaxed group-hover:text-gray-300 transition-colors">
+                            专业排名前10%。主修创意工作营、女装创意综合设计。获 HKDADC 香港数字艺术与设计比赛三等奖、FA国际前沿创新设计大赛铜奖等。
+                        </p>
+                    </div>
+
+                    <h3 class="text-sm text-gray-500 uppercase tracking-widest mt-16 mb-8 pb-2 border-b border-white/10">Software & Core Skills / 核心技能</h3>
+                    <div class="flex flex-wrap gap-2 text-xs uppercase tracking-widest">
+                        <span class="border border-white/20 px-3 py-1 hover:border-accent hover:text-accent transition-colors">Blender / Clo3D</span>
+                        <span class="border border-white/20 px-3 py-1 hover:border-accent hover:text-accent transition-colors">Adobe Creative Suite</span>
+                        <span class="border border-white/20 px-3 py-1 hover:border-accent hover:text-accent transition-colors">Midjourney / AIGC</span>
+                        <span class="border border-white/20 px-3 py-1 hover:border-accent hover:text-accent transition-colors">SPSS / Excel Data Analysis</span>
+                        <span class="border border-white/20 px-3 py-1 hover:border-accent hover:text-accent transition-colors">Brand IMC Strategy</span>
+                        <span class="border border-white/20 px-3 py-1 hover:border-accent hover:text-accent transition-colors">Consumer Psychology</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Works (Portfolio Links with Background Images & Chinese Titles) -->
+    <section id="works" class="py-24 px-6">
+        <h2 class="syne-font text-4xl lg:text-6xl font-bold uppercase mb-16 text-center">Selected<br><span class="text-accent">Works.</span></h2>
+        
+        <div class="editorial-grid auto-rows-[minmax(420px,auto)]">
+            
+            <!-- Project 01 (L'OREAL) -->
+            <a href="欧莱雅产品升级L'OREAL .pdf" target="_blank" class="col-span-12 lg:col-span-8 border border-white/10 p-6 flex flex-col justify-between group hover:border-accent transition-colors relative overflow-hidden bg-[#0a0a0a] block cursor-pointer">
+                <img src="./bg-margiela.jpg" onerror="this.style.display='none'" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-70 transition-opacity duration-700 z-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-0"></div>
+                
+                <div class="z-10 flex justify-between items-start relative">
+                    <span class="text-xs uppercase tracking-widest text-gray-300">01 / Brand Strategy & Beauty Tech</span>
+                    <span class="syne-font text-4xl text-white/30 font-bold group-hover:text-accent transition-colors">2026</span>
+                </div>
+                <div class="z-10 mt-24 relative">
+                    <h3 class="syne-font text-3xl md:text-5xl font-bold mb-2 uppercase text-white">Maison Margiela</h3>
+                    <!-- 1. 欧莱雅项目中文标题 -->
+                    <h4 class="text-lg md:text-xl text-accent font-light tracking-wide mb-4">欧莱雅商赛：Maison Margiela梅森马吉拉产品升级和整合营销方案</h4>
+                    <p class="text-sm text-gray-300 max-w-xl mb-6">
+                        L'Oréal Brandstorm Challenge. A holistic IMC campaign and product innovation featuring a heat-sensitive thermochromic fragrance bottle. Integrated Al-generated emotional mapping and SPSS consumer persona modeling for Gen-Z targeting.
+                    </p>
+                    <span class="uppercase text-xs tracking-widest border-b border-accent text-accent pb-1 inline-block">Open PDF Project ↗</span>
+                </div>
+            </a>
+
+            <!-- Project 02 (TO SUMMER) -->
+            <a href="谷子玉 作品集.pdf#page=20" target="_blank" class="col-span-12 md:col-span-6 lg:col-span-4 border border-white/10 p-6 flex flex-col justify-between group hover:border-accent transition-colors relative overflow-hidden bg-[#0a0a0a] block cursor-pointer">
+                <img src="./bg-tosummer.jpg" onerror="this.style.display='none'" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-70 transition-opacity duration-700 z-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-0"></div>
+                
+                <div class="z-10 flex justify-between items-start relative">
+                    <span class="text-xs uppercase tracking-widest text-gray-300">02 / High-End Lifestyle</span>
+                    <span class="syne-font text-4xl text-white/30 font-bold group-hover:text-accent transition-colors">2026</span>
+                </div>
+                <div class="z-10 mt-24 relative">
+                    <h3 class="syne-font text-2xl md:text-3xl font-bold mb-2 uppercase text-white">TO SUMMER 观夏<br><span class="text-gray-400 text-xl md:text-2xl">「岑」Series</span></h3>
+                    <!-- 2. 观夏项目中文标题 -->
+                    <h4 class="text-base md:text-lg text-accent font-light tracking-wide mb-4">观夏 TO SUMMER 高端产品线战略提案</h4>
+                    <p class="text-sm text-gray-300 mb-6">
+                        Product architecture and luxury hospitality strategy. Transforming fragrance from a commodity to an entry point for Eastern high-end lifestyle through Space, Body, Taste, and Home scenarios.
+                    </p>
+                    <span class="uppercase text-xs tracking-widest border-b border-accent text-accent pb-1 inline-block">Open PDF Project ↗</span>
+                </div>
+            </a>
+
+            <!-- Project 03 (EARCOSMOS) -->
+            <a href="谷子玉 作品集.pdf#page=66" target="_blank" class="col-span-12 md:col-span-6 lg:col-span-4 border border-white/10 p-6 flex flex-col justify-between group hover:border-accent transition-colors relative overflow-hidden bg-[#0a0a0a] block cursor-pointer">
+                <img src="./bg-earcosmos.jpg" onerror="this.style.display='none'" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-70 transition-opacity duration-700 z-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-0"></div>
+                
+                <div class="z-10 flex justify-between items-start relative">
+                    <span class="text-xs uppercase tracking-widest text-gray-300">03 / Virtual Fashion & Web3</span>
+                    <span class="syne-font text-4xl text-white/30 font-bold group-hover:text-accent transition-colors">2025</span>
+                </div>
+                <div class="z-10 mt-24 relative">
+                    <h3 class="syne-font text-2xl md:text-3xl font-bold mb-2 uppercase text-white">EARCOSMOS</h3>
+                    <!-- 3. EARCOSMOS 中文标题 -->
+                    <h4 class="text-base md:text-lg text-accent font-light tracking-wide mb-4">虚拟时尚助听器品牌战略与营销方案</h4>
+                    <p class="text-sm text-gray-300 mb-6">
+                        Virtual hearing aid enclosures (cyber earrings) empowering the deaf community. Implemented AR try-ons, GTA5 game integration, and a Direct-to-Avatar (D2A) automated revenue-sharing smart contract mechanism.
+                    </p>
+                    <span class="uppercase text-xs tracking-widest border-b border-accent text-accent pb-1 inline-block">Open PDF Project ↗</span>
+                </div>
+            </a>
+
+            <!-- Project 04 (ALO Yoga) -->
+            <a href="谷子玉 作品集.pdf#page=5" target="_blank" class="col-span-12 lg:col-span-8 border border-white/10 p-6 flex flex-col justify-between group hover:border-accent transition-colors relative overflow-hidden bg-[#0a0a0a] block cursor-pointer">
+                <img src="./bg-aloyoga.jpg" onerror="this.style.display='none'" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-70 transition-opacity duration-700 z-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-0"></div>
+                
+                <div class="z-10 flex justify-between items-start relative">
+                    <span class="text-xs uppercase tracking-widest text-gray-300">04 / IMC & Brand Shift</span>
+                    <span class="syne-font text-4xl text-white/30 font-bold group-hover:text-accent transition-colors">2026</span>
+                </div>
+                <div class="z-10 mt-24 relative">
+                    <h3 class="syne-font text-3xl md:text-5xl font-bold mb-2 uppercase text-white">ALO Yoga<br><span class="text-gray-400 text-2xl md:text-4xl">"In Pursuit of Stillness"</span></h3>
+                    <!-- 4. ALO 项目中文标题 -->
+                    <h4 class="text-lg md:text-xl text-accent font-light tracking-wide mb-4">ALO YOGA 年度品牌整合营销战略全案</h4>
+                    <p class="text-sm text-gray-300 max-w-xl mb-6">
+                        A comprehensive IMC strategy blueprint redefining ALO from a street-style label to a "Mindful Aesthetic Sanctuary". Features a 60/40 brand-to-performance resource allocation loop and mobile sanctuary pop-ups.
+                    </p>
+                    <span class="uppercase text-xs tracking-widest border-b border-accent text-accent pb-1 inline-block">Open PDF Project ↗</span>
+                </div>
+            </a>
+
+            <!-- Project 05 (Fashion Design) - Text top, Image bottom -->
+            <a href="Portfolio -设计师谷子玉.pdf" target="_blank" class="col-span-12 border border-white/10 flex flex-col group hover:border-accent transition-colors bg-[#050505] cursor-pointer overflow-hidden">
+                
+                <!-- 上方文本区域 -->
+                <div class="p-6 flex flex-col lg:flex-row justify-between relative z-10 w-full">
+                    <div class="flex flex-col justify-between lg:w-1/3">
+                        <div class="flex justify-between items-start mb-12">
+                            <span class="text-xs uppercase tracking-widest text-gray-300">05 / Fashion Collection Design</span>
+                            <span class="syne-font text-4xl text-white/30 font-bold group-hover:text-accent transition-colors">22-23</span>
+                        </div>
+                        <div>
+                            <h3 class="syne-font text-3xl md:text-4xl font-bold mb-2 uppercase text-white">RuirUirul &<br>PSYCHOLOGICAL</h3>
+                            <!-- 5. 服装项目总中文标题 -->
+                            <h4 class="text-base md:text-lg text-accent font-light tracking-wide mb-8 lg:mb-4 leading-relaxed">玛丝菲尔集团旗下品牌系列服装商业设计<br><span class="text-sm text-gray-400">品牌系列设计｜时尚女装品牌｜复古怪诞少女风品牌｜高尔夫服饰品牌｜运动休闲品牌</span></h4>
+                            <span class="uppercase text-xs tracking-widest border-b border-accent text-accent pb-1 inline-block">Open PDF Project ↗</span>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-2/3 lg:pl-12 lg:border-l border-white/20 flex flex-col justify-end text-sm text-gray-300 mt-8 lg:mt-0 z-10 relative">
+                        <!-- 段落级中文标签 -->
+                        <p class="mb-5">
+                            <strong class="text-accent block mb-1">独立设计师品牌系列：Utopia & Rose Island</strong>
+                            <strong class="text-white">Utopia & Rose Island:</strong> Spearheaded complete collection lifecycles for Marisfrolg's sub-labels. Defined by anti-gravity silhouettes, cross-stitch embroidery, and stark black-and-white visual identity. 
+                        </p>
+                        <p class="mb-5">
+                            <strong class="text-accent block mb-1">跨界联名赛车服系列：RuirUirul x KTM</strong>
+                            <strong class="text-white">RuirUirul x KTM:</strong> Led the cross-industry collaborative racing suit collection, navigating complex supply chain requirements to deliver technical sports garments.
+                        </p>
+                        <p>
+                            <strong class="text-accent block mb-1">高尔夫运动服饰系列：PSYCHOLOGICAL Golf</strong>
+                            <strong class="text-white">PSYCHOLOGICAL Golf:</strong> Engineered performance sportswear emphasizing precision, athletic breathability, and athleisure aesthetics.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 下方横版图片展示层 (将图片2.png 沉淀在底部横向展示) -->
+                <div class="w-full relative mt-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-transparent to-[#050505] z-10 h-12"></div>
+                    <img src="./图片2.png" onerror="this.onerror=null; this.src='./图片2.jpg';" alt="Fashion Collection Presentation" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 relative z-10 bg-black">
+        <div class="syne-font text-3xl font-bold uppercase tracking-tighter">ZY.<span class="text-accent">GU</span></div>
+        <div class="flex gap-8 text-xs uppercase tracking-widest text-gray-500">
+            <a href="mailto:ritaguziyu@163.com" class="hover:text-accent transition-colors">ritaguziyu@163.com</a>
+            <span class="hover:text-accent transition-colors">+86 183 4898 3530</span>
+        </div>
+        <div class="text-xs uppercase tracking-widest text-gray-600">
+            &copy; 2026 ZIYU GU. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+</body>
+</html>
